@@ -33,7 +33,7 @@ $tweaks = @(
 	"InstallTitusProgs", #REQUIRED FOR OTHER PROGRAM INSTALLS!
 	"InstallAdobe",
 	"Install7Zip",
-	"InstallNotepadplusplus",
+	"InstallAtom",
 	"InstallMediaPlayerClassic",
 	"InstallTeamViewer"
 	"InstallFirefox"
@@ -217,9 +217,9 @@ Function Install7Zip {
 	choco install 7zip -y
 }
 
-Function InstallNotepadplusplus {
-	Write-Output "Installing Notepad++"
-	choco install notepadplusplus -y
+Function InstallAtom {
+	Write-Output "Installing Atom"
+	choco install atom -y
 }
 
 Function InstallMediaPlayerClassic {
