@@ -13,7 +13,7 @@ This is the Ultimate Windows 10 Script from a creation from multiple debloat scr
 ## Modifications
 I encourage people to fork this project and comment out things they don't like! Here is a list of normal things people change:
 - Uninstalling OneDrive (This is on in my script)
-- Installing Chocolatey, Acrobat Reader, Atom, MPC-HC, 7-Zip, TeamViewer, Firefox, Vivaldi, VLC, TreeSize
+- Installing Chocolatey, Acrobat Reader, Atom, MPC-HC, 7-Zip, TeamViewer, Firefox, Vivaldi, VLC, TreeSize, Discord, Dashlane, Spotify, Epic Games Launcher, Steam, Origin, Balena Etcher, Macrium Reflect Free, MiniTool Parition Wizard Free, Teracopy, QbitTorrent
 
 Comment any thing you don't want out... Example:
 
