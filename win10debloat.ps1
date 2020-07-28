@@ -35,6 +35,12 @@ $tweaks = @(
 	"Install7Zip",
 	"InstallNotepadplusplus",
 	"InstallMediaPlayerClassic",
+	"InstallTeamViewer"
+	"InstallFirefox"
+	"InstallVlc"
+	"InstallTreeSize"
+	"InstallVivaldi"
+
 
 	### Windows Apps
 	"DebloatAll",
@@ -206,11 +212,6 @@ Function InstallAdobe {
 	choco install adobereader -y
 }
 
-Function InstallJava {
-	Write-Output "Installing Java"
-	choco install jre8 -y
-}
-
 Function Install7Zip {
 	Write-Output "Installing 7-Zip"
 	choco install 7zip -y
@@ -224,6 +225,31 @@ Function InstallNotepadplusplus {
 Function InstallMediaPlayerClassic {
 	Write-Output "Installing Media Player Classic (VLC Alternative)"
 	choco install mpc-hc -y
+}
+
+Function InstallTeamViewer {
+	Write-Output "Installing TeamViewer"
+	choco install teamviewer -y
+}
+
+Function InstallFirefox {
+	Write-Output "Installing Firefox"
+	choco install firefox -y
+}
+
+Function InstallVlc {
+	Write-Output "Installing VLC media player"
+	choco install vlc -y
+}
+
+Function InstallTreeSize {
+	Write-Output "Installing TreeSize"
+	choco install treesizefree -y
+}
+
+Function InstallVivaldi {
+	Write-Output "Installing Vivaldi browser"
+	choco install vivaldi -y
 }
 
 ##########
