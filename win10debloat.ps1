@@ -30,27 +30,17 @@ $tweaks = @(
 	"RequireAdmin",
 
 	### External Program Setup
-	"InstallTitusProgs", #REQUIRED FOR OTHER PROGRAM INSTALLS!
+	"InstallDependencies", #REQUIRED FOR OTHER PROGRAM INSTALLS!
 	"InstallAdobe",
 	"Install7Zip",
-	"InstallAtom",
 	"InstallMediaPlayerClassic",
-	"InstallTeamViewer"
 	"InstallFirefox"
 	"InstallVlc"
 	"InstallTreeSize"
-	"InstallVivaldi"
-	"InstallDiscord"
-	"InstallDashlane"
-	"InstallSpotify"
-	"InstallEpicLauncher"
-	"InstallSteam"
-	"InstallEtcher"
-	"InstallMacriumReflect"
-	"InstallMiniToolPartitionWizard"
-	"InstallOrigin"
-	"InstallTeracopy"
-	"InstallQbittorrent"
+	"InstallChrome"
+	"InstallTeamviewerHost"
+	"InstallAvg"
+
 
 
 	### Windows Apps
@@ -204,10 +194,10 @@ $tweaks = @(
 )
 
 #########
-# Recommended Titus Programs
+# Recommended Programs
 #########
 
-Function InstallTitusProgs {
+Function InstallDependencies {
 	Write-Output "Installing Chocolatey"
 	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 	choco install chocolatey-core.extension -y
@@ -228,19 +218,9 @@ Function Install7Zip {
 	choco install 7zip -y
 }
 
-Function InstallAtom {
-	Write-Output "Installing Atom"
-	choco install atom -y
-}
-
 Function InstallMediaPlayerClassic {
 	Write-Output "Installing Media Player Classic (VLC Alternative)"
 	choco install mpc-hc -y
-}
-
-Function InstallTeamViewer {
-	Write-Output "Installing TeamViewer"
-	choco install teamviewer -y
 }
 
 Function InstallFirefox {
@@ -258,66 +238,20 @@ Function InstallTreeSize {
 	choco install treesizefree -y
 }
 
-Function InstallVivaldi {
-	Write-Output "Installing Vivaldi browser"
-	choco install vivaldi -y
+Function InstallChrome {
+	Write-Output "Installing Google Chrome"
+	choco install googlechrome -y
 }
 
-Function InstallDiscord {
-	Write-Output "Installing Discord"
-	choco install discord -y
+Function InstallTeamviewerHost {
+	Write-Output "Installing Team Viewer Host"
+	choco install teamviewer.host -y
 }
 
-Function InstallDashlane {
-	Write-Output "Installing Dashlane"
-	choco install dashlane -y
+Function InstallAvg {
+	Write-Output "Installing AVG Antivirus"
+	choco install avgantivirusfree -y
 }
-
-Function InstallSpotify {
-	Write-Output "Installing Spotify"
-	choco install spotify -y
-}
-
-Function InstallEpicLauncher {
-	Write-Output "Installing Epic Launcher"
-	choco install epicgameslauncher -y
-}
-
-Function InstallSteam {
-	Write-Output "Installing Steam"
-	choco install steam -y
-}
-
-Function InstallEtcher {
-	Write-Output "Installing Etcher"
-	choco install etcher -y
-}
-
-Function InstallMacriumReflect {
-	Write-Output "Installing Macrium Reflect Free"
-	choco install reflect-free -y
-}
-
-Function InstallMiniToolPartitionWizard {
-	Write-Output "Installing MiniTool Partition Wizard"
-	choco install partitionwizard -y
-}
-
-Function InstallOrigin {
-	Write-Output "Installing EA Origin"
-	choco install origin -y
-}
-
-Function InstallTeracopy {
-	Write-Output "Installing Teracopy"
-	choco install teracopy -y
-}
-
-Function InstallQbittorrent {
-	Write-Output "Installing QbitTorrent"
-	choco install qbittorrent
-}
-
 ##########
 # Privacy Tweaks
 ##########
