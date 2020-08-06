@@ -51,6 +51,7 @@ $tweaks = @(
 	"InstallOrigin"
 	"InstallTeracopy"
 	"InstallQbittorrent"
+	"InstallSteelSeries"
 
 
 	### Windows Apps
@@ -316,6 +317,11 @@ Function InstallTeracopy {
 Function InstallQbittorrent {
 	Write-Output "Installing QbitTorrent"
 	choco install qbittorrent
+}
+
+Function InstallSteelSeries {
+	Write-Output "Installing Steel Series Engine"
+	choco install steelseries-engine
 }
 
 ##########
