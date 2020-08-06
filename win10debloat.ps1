@@ -52,6 +52,7 @@ $tweaks = @(
 	"InstallTeracopy"
 	"InstallQbittorrent"
 	"InstallSteelSeries"
+	"InstallVyprVpn"
 
 
 	### Windows Apps
@@ -316,12 +317,17 @@ Function InstallTeracopy {
 
 Function InstallQbittorrent {
 	Write-Output "Installing QbitTorrent"
-	choco install qbittorrent
+	choco install qbittorrent -y
 }
 
 Function InstallSteelSeries {
 	Write-Output "Installing Steel Series Engine"
-	choco install steelseries-engine
+	choco install steelseries-engine -y
+}
+
+Function InstallVyprVpn {
+	Write-Output "Installing Vypr VPN"
+	choco install vyprvpn -y
 }
 
 ##########
