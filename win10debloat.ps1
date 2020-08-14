@@ -32,8 +32,6 @@ $tweaks = @(
 	### External Program Setup
 	"InstallTitusProgs", #REQUIRED FOR OTHER PROGRAM INSTALLS!
 	"InstallAdobe",
-	"Install7Zip",
-	"InstallAtom",
 	"InstallMediaPlayerClassic",
 	"InstallTeamViewer"
 	"InstallFirefox"
@@ -42,17 +40,13 @@ $tweaks = @(
 	"InstallVivaldi"
 	"InstallDiscord"
 	"InstallDashlane"
-	"InstallSpotify"
 	"InstallEpicLauncher"
 	"InstallSteam"
 	"InstallEtcher"
-	"InstallMacriumReflect"
 	"InstallMiniToolPartitionWizard"
 	"InstallOrigin"
 	"InstallTeracopy"
 	"InstallQbittorrent"
-	"InstallSteelSeries"
-	"InstallVyprVpn"
 
 
 	### Windows Apps
@@ -111,7 +105,7 @@ $tweaks = @(
 	"DisableStorageSense",        # "EnableStorageSense",
 	"DisableDefragmentation",     # "EnableDefragmentation",
 	"DisableSuperfetch",          # "EnableSuperfetch",
-	"DisableIndexing",            # "EnableIndexing",
+	"EnableIndexing",            # "DisableIndexing",
 	"SetBIOSTimeUTC",             # "SetBIOSTimeLocal",
 	"DisableHibernation",		# "EnableHibernation",          #
 	"EnableSleepButton",		# "DisableSleepButton",
@@ -230,11 +224,6 @@ Function Install7Zip {
 	choco install 7zip -y
 }
 
-Function InstallAtom {
-	Write-Output "Installing Atom"
-	choco install atom -y
-}
-
 Function InstallMediaPlayerClassic {
 	Write-Output "Installing Media Player Classic (VLC Alternative)"
 	choco install mpc-hc -y
@@ -275,11 +264,6 @@ Function InstallDashlane {
 	choco install dashlane -y
 }
 
-Function InstallSpotify {
-	Write-Output "Installing Spotify"
-	choco install spotify -y
-}
-
 Function InstallEpicLauncher {
 	Write-Output "Installing Epic Launcher"
 	choco install epicgameslauncher -y
@@ -293,11 +277,6 @@ Function InstallSteam {
 Function InstallEtcher {
 	Write-Output "Installing Etcher"
 	choco install etcher -y
-}
-
-Function InstallMacriumReflect {
-	Write-Output "Installing Macrium Reflect Free"
-	choco install reflect-free -y
 }
 
 Function InstallMiniToolPartitionWizard {
@@ -317,17 +296,7 @@ Function InstallTeracopy {
 
 Function InstallQbittorrent {
 	Write-Output "Installing QbitTorrent"
-	choco install qbittorrent -y
-}
-
-Function InstallSteelSeries {
-	Write-Output "Installing Steel Series Engine"
-	choco install steelseries-engine -y
-}
-
-Function InstallVyprVpn {
-	Write-Output "Installing Vypr VPN"
-	choco install vyprvpn -y
+	choco install qbittorrent
 }
 
 ##########
@@ -2052,7 +2021,7 @@ Function UninstallMsftBloat {
 	Get-AppxPackage "Microsoft.MicrosoftSolitaireCollection" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.MicrosoftStickyNotes" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.MinecraftUWP" | Remove-AppxPackage
-	Get-AppxPackage "Microsoft.MSPaint" | Remove-AppxPackage
+	# Get-AppxPackage "Microsoft.MSPaint" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.NetworkSpeedTest" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.Office.OneNote" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.Office.Sway" | Remove-AppxPackage
@@ -2095,7 +2064,7 @@ Function InstallMsftBloat {
 	Get-AppxPackage -AllUsers "Microsoft.MicrosoftSolitaireCollection" | ForEach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
 	Get-AppxPackage -AllUsers "Microsoft.MicrosoftStickyNotes" | ForEach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
 	Get-AppxPackage -AllUsers "Microsoft.MinecraftUWP" | ForEach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
-	Get-AppxPackage -AllUsers "Microsoft.MSPaint" | ForEach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
+	# Get-AppxPackage -AllUsers "Microsoft.MSPaint" | ForEach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
 	Get-AppxPackage -AllUsers "Microsoft.NetworkSpeedTest" | ForEach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
 	Get-AppxPackage -AllUsers "Microsoft.Office.OneNote" | ForEach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
 	Get-AppxPackage -AllUsers "Microsoft.Office.Sway" | ForEach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
