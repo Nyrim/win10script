@@ -47,6 +47,8 @@ $tweaks = @(
 	"InstallOrigin"
 	"InstallTeracopy"
 	"InstallQbittorrent"
+	"InstallVsCode"
+	"InstallGit"
 
 
 	### Windows Apps
@@ -296,7 +298,17 @@ Function InstallTeracopy {
 
 Function InstallQbittorrent {
 	Write-Output "Installing QbitTorrent"
-	choco install qbittorrent
+	choco install qbittorrent -y
+}
+
+Function InstallVsCode {
+	Write-Output "Installing QbitTorrent"
+	choco install vscode -y
+}
+
+Function InstallGit {
+	Write-Output "Installing Git"
+	choco install git -y
 }
 
 ##########
